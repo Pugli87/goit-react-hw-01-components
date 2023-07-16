@@ -1,28 +1,29 @@
 import React from 'react';
-import ContainerProfile from './containerProfile/ContainerProfile';
+import './Profile.css';
+import ContainerProfile from '../Container';
 import Description from './description/Description';
 import Status from './status/Status';
 import PropTypes from 'prop-types';
-
 function Profile({ username, tag, location, avatar, stats }) {
   return (
-    <ContainerProfile>
-      <Description
-        username={username}
-        tag={tag}
-        location={location}
-        avatar={avatar}
-      />
-      <Status stats={stats} />
+    <ContainerProfile type="container profile">
+      <div className="wrapper">
+        <Description
+          username={username}
+          tag={tag}
+          location={location}
+          avatar={avatar}
+        />
+        <Status stats={stats} />
+      </div>
     </ContainerProfile>
   );
 }
-
 Profile.proptype = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
-  stats: PropTypes.objets,
+  stats: PropTypes.object,
 };
 export default Profile;
