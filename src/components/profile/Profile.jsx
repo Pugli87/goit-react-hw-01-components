@@ -5,15 +5,15 @@ import Description from './description/Description';
 import Status from './status/Status';
 import PropTypes from 'prop-types';
 
-function Profile({ username, tag, location, avatar, stats }) {
+function Profile({ avatar, username, tag, location,  stats }) {
   return (
     <ContainerProfile type="container profile">
       <div className="wrapper">
         <Description
+          avatar={avatar}
           username={username}
           tag={tag}
           location={location}
-          avatar={avatar}
         />
         <Status stats={stats} />
       </div>
