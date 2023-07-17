@@ -37,9 +37,11 @@
   padding: 15px 0;
   color: rgb(128, 128, 128);
 }
+
 .trBody {
   text-align: center;
 }
+
 .trBody:last-child .tbody:first-child {
   border-bottom-left-radius: 5px;
 }
