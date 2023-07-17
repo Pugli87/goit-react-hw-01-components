@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function ItemFriend({ avatar, name, isOnline }) {
+function ItemFriend({ isOnline, avatar, name }) {
   return (
     <li className="item-friend">
       <div className={isOnline ? 'status online' : 'status offline'}></div>
@@ -12,9 +12,9 @@ function ItemFriend({ avatar, name, isOnline }) {
 }
 
 ItemFriend.propTypes = {
+  isOnline: PropTypes.bool,
   avatar: PropTypes.string,
   name: PropTypes.string,
-  isOnline: PropTypes.bool,
 };
 
 export default ItemFriend;
