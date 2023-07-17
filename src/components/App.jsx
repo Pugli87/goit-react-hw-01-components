@@ -1,4 +1,5 @@
 import React from 'react';
+
 import user from '../data/profileData/user.json';
 import stats from '../data/statisticsData/data.json';
 import frienData from '../data/friendsData/friends.json';
@@ -7,7 +8,8 @@ import Profile from './profile/Profile';
 import Statistics from './statistics/Statistics';
 import Friends from './friends/Friends';
 import Transaction from './transactions/Transaction';
-export const App = () => {
+
+const App = () => {
   return (
     <>
       <Profile
@@ -23,3 +25,5 @@ export const App = () => {
     </>
   );
 };
+
+export default App;

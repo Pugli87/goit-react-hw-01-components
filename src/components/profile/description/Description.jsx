@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Profile.css';
 import PropTypes from 'prop-types';
+
 function Description({ username, tag, location, avatar }) {
   return (
     <div className="description">
@@ -11,10 +12,13 @@ function Description({ username, tag, location, avatar }) {
     </div>
   );
 }
-Description.proptype = {
+
+Description.propTypes = {
   username: PropTypes.string,
   tag: PropTypes.string,
   location: PropTypes.string,
   avatar: PropTypes.string,
 };
+
 export default Description;
+

@@ -5,8 +5,9 @@ function ContainerProfile({ children }) {
   return <div className="profile">{children}</div>;
 }
 
-ContainerProfile.PropType = {
+ContainerProfile.propTypes = {
   children: PropTypes.node,
 };
 
 export default ContainerProfile;
+

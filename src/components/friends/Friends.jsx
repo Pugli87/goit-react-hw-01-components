@@ -1,8 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContainerProfile from 'components/Container';
+import ContainerProfile from 'components/container/Container';
 import ItemFriend from './ItemFriend/ItemFriend';
 import './friends.css';
+
 function Friends({ friends }) {
   return (
     <ContainerProfile type="container friends">
@@ -19,7 +20,9 @@ function Friends({ friends }) {
     </ContainerProfile>
   );
 }
-Friends.proptype = {
+
+Friends.propTypes = {
   friends: PropTypes.array,
 };
+
 export default Friends;

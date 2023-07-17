@@ -1,6 +1,7 @@
 import React from 'react';
 import '../Profile.css';
 import PropTypes from 'prop-types';
+
 function Status({ stats }) {
   return (
     <ul className="stats">
@@ -19,7 +20,8 @@ function Status({ stats }) {
     </ul>
   );
 }
-Status.proptype = {
+
+Status.propTypes = {
   stats: PropTypes.object,
 };
 

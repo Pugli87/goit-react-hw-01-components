@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 function ItemStat({ label, percentage }) {
   return (
     <li className="item">
@@ -8,8 +9,11 @@ function ItemStat({ label, percentage }) {
     </li>
   );
 }
-ItemStat.proptype = {
+
+ItemStat.propTypes = {
   label: PropTypes.string,
   percentage: PropTypes.string,
 };
+
 export default ItemStat;
+

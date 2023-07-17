@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContainerProfile from 'components/Container';
+import ContainerProfile from 'components/container/Container';
 import ItemStat from './itemStat/ItemStat';
 import './statistics.css';
 
-function statistics({ stats, title }) {
+function Statistics({ stats, title }) {
   return (
     <ContainerProfile type="container statistics">
       <section className="statistics__section">
@@ -25,8 +25,11 @@ function statistics({ stats, title }) {
     </ContainerProfile>
   );
 }
-statistics.proptype = {
+
+Statistics.propTypes = {
   stats: PropTypes.array,
   title: PropTypes.string,
 };
-export default statistics;
+
+export default Statistics;
+
