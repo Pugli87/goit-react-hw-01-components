@@ -2,7 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function ContainerProfile({ children }) {
-  return <div className="profile">{children}</div>;
+  return (
+    <div className="profile">
+      {children}
+    </div>
+  );
 }
 
 ContainerProfile.propTypes = {
