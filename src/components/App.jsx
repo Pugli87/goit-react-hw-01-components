@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import user from '../data/profileData/user.json';
 import stats from '../data/statisticsData/data.json';
@@ -24,6 +25,14 @@ const App = () => {
       <Transaction transactions={transactions} />
     </>
   );
+};
+
+App.propTypes = {
+  username: PropTypes.string,
+  tag: PropTypes.string,
+  location: PropTypes.string,
+  avatar: PropTypes.string,
+  stats: PropTypes.object,
 };
 
 export default App;
