@@ -11,9 +11,9 @@ function Friends({ friends }) {
         {friends.map(friend => (
           <ItemFriend
             key={friend.id}
+            isOnline={friend.isOnline}
             avatar={friend.avatar}
             name={friend.name}
-            isOnline={friend.isOnline}
           />
         ))}
       </ul>
