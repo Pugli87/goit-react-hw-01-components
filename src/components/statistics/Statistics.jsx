@@ -1,18 +1,42 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContainerProfile from 'components/container/Container';
+import styled from 'styled-components';
+import Container from 'components/container/Container';
 import ItemStat from './itemStat/ItemStat';
-import './statistics.css';
+
+
+const StatisticsSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+`;
+
+const StatisticsContTitle = styled.div`
+  background-color: #fff;
+  padding: 20px 60px;
+`;
+
+const StatisticsTitle = styled.h2`
+  font-weight: 400;
+  font-size: 30px;
+  text-transform: uppercase;
+`;
+
+const StatsList = styled.ul`
+  display: flex;
+`; 
 
 function Statistics({ stats, title }) {
   return (
-    <ContainerProfile type="container statistics">
-      <section className="statistics__section">
-        <div className="statistics__title">
-          <h2 className="title">{title}</h2>
-        </div>
+    <Container type="container statistics">
+      <StatisticsSection>
+        <StatisticsContTitle>
+          <StatisticsTitle>{title}</StatisticsTitle>
+        </StatisticsContTitle>
 
-        <ul className="stats-list">
+        <StatsList>
           {stats.map(stat => (
             <ItemStat
               label={stat.label}
@@ -20,15 +44,15 @@ function Statistics({ stats, title }) {
               key={stat.id}
             />
           ))}
-        </ul>
-      </section>
-    </ContainerProfile>
+        </StatsList>
+      </StatisticsSection>
+    </Container>
   );
 }
 
 Statistics.propTypes = {
-  stats: PropTypes.array,
-  title: PropTypes.string,
+  stats: PropTypes.array.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Statistics;
