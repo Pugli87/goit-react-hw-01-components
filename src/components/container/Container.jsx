@@ -2,7 +2,7 @@ import React from 'react';
 import './Container.css';
 import PropTypes from 'prop-types';
 
-function ContainerProfile({ children, type }) {
+function Container({ children, type }) {
   return (
     <div className={type}>
       {children}
@@ -10,9 +10,9 @@ function ContainerProfile({ children, type }) {
   );
 }
 
-ContainerProfile.propTypes = {
+Container.propTypes = {
   children: PropTypes.node,
   type: PropTypes.string,
 };
 
-export default ContainerProfile;
+export default Container;
