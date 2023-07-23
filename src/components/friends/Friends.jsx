@@ -1,13 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import ContainerProfile from 'components/container/Container';
+import styled from 'styled-components';
 import ItemFriend from './ItemFriend/ItemFriend';
-import './friends.css';
+import Container from 'components/container/Container';
+
+const FriendList = styled.ul`
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
 
 function Friends({ friends }) {
   return (
-    <ContainerProfile type="container friends">
-      <ul className="friend-list">
+    <Container type="container friends">
+      <FriendList>
         {friends.map(friend => (
           <ItemFriend
             key={friend.id}
@@ -16,13 +22,13 @@ function Friends({ friends }) {
             name={friend.name}
           />
         ))}
-      </ul>
-    </ContainerProfile>
+      </FriendList>
+    </Container>
   );
 }
 
 Friends.propTypes = {
-  friends: PropTypes.array,
+  friends: PropTypes.array.isRequired,
 };
 
 export default Friends;
