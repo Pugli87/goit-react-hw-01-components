@@ -20,7 +20,7 @@ const TableHead = styled.thead`
 
 const TableRow = styled.tr`
   width: 250px;
-  background-color: ${props => props.isOdd ? "rgb(240, 240, 240)" : "#fff"};
+  background-color: ${props => props.$isOdd ? "rgb(240, 240, 240)" : "#fff"};
 `;
 
 const TableHeader = styled.th`
@@ -69,8 +69,8 @@ function Table({ transactions }) {
       <TableBody >
         {transactions.map((transaction, index) => (
           <TableRow
-            $key={index}
-            isOdd={index % 2 !== 0}
+            key={index}
+            $isOdd={index % 2 !== 0}
           >
             <TableDates>
               {CamelCaseFirstLetter(transaction.type)}
