@@ -16,13 +16,13 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   padding: 20px 50px;
-  background: ${props => props.variant === 'primary' ? "lightgray" : "rgb(255, 255, 255)"};
+  background-color: ${props => props.$variant === 'primary' ? "lightgray" : "rgb(255, 255, 255)"};
 `;
 
 const App = () => {
   return (
     <>
-      <Container variant="primary">
+      <Container $variant="primary">
         <Profile
           username={user.username}
           tag={user.tag}
