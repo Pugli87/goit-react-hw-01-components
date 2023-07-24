@@ -2,17 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ItemFriend from './ItemFriend/ItemFriend';
-import Container from 'components/container/Container';
 
 const FriendList = styled.ul`
   display: flex;
   flex-direction: column;
+  background-color: rgb(255, 255, 255);
   gap: 20px;
+  margin-bottom: 50px;
 `;
 
 function Friends({ friends }) {
   return (
-    <Container type="container friends">
       <FriendList>
         {friends.map(friend => (
           <ItemFriend
@@ -23,7 +23,6 @@ function Friends({ friends }) {
           />
         ))}
       </FriendList>
-    </Container>
   );
 }
 

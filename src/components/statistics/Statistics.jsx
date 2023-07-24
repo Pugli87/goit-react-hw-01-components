@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import Container from 'components/container/Container';
 import ItemStat from './itemStat/ItemStat';
 
 
@@ -30,7 +29,6 @@ const StatsList = styled.ul`
 
 function Statistics({ stats, title }) {
   return (
-    <Container type="container statistics">
       <StatisticsSection>
         <StatisticsContTitle>
           <StatisticsTitle>{title}</StatisticsTitle>
@@ -46,7 +44,6 @@ function Statistics({ stats, title }) {
           ))}
         </StatsList>
       </StatisticsSection>
-    </Container>
   );
 }
 

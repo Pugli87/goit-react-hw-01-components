@@ -50,7 +50,7 @@ function ItemStat({ label, percentage }) {
 
 ItemStat.propTypes = {
   label: PropTypes.string.isRequired,
-  percentage: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
 
 export default ItemStat;
