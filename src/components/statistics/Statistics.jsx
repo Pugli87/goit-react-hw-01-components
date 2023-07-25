@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import ItemStat from './itemStat/ItemStat';
 
-
 const StatisticsSection = styled.section`
   display: flex;
   justify-content: center;
@@ -25,25 +24,25 @@ const StatisticsTitle = styled.h2`
 
 const StatsList = styled.ul`
   display: flex;
-`; 
+`;
 
 function Statistics({ stats, title }) {
   return (
-      <StatisticsSection>
-        <StatisticsContTitle>
-          <StatisticsTitle>{title}</StatisticsTitle>
-        </StatisticsContTitle>
+    <StatisticsSection>
+      <StatisticsContTitle>
+        {title && <StatisticsTitle>{title}</StatisticsTitle>}
+      </StatisticsContTitle>
 
-        <StatsList>
-          {stats.map(stat => (
-            <ItemStat
-              label={stat.label}
-              percentage={stat.percentage}
-              key={stat.id}
-            />
-          ))}
-        </StatsList>
-      </StatisticsSection>
+      <StatsList>
+        {stats.map(stat => (
+          <ItemStat
+            label={stat.label}
+            percentage={stat.percentage}
+            key={stat.id}
+          />
+        ))}
+      </StatsList>
+    </StatisticsSection>
   );
 }
 
@@ -53,4 +52,3 @@ Statistics.propTypes = {
 };
 
 export default Statistics;
-
